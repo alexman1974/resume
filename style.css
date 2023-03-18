@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+body {
+font-family: 'Roboto', sans-serif;
+font-size: 14px;
+font-weight: normal;
+line-height: 1.5em;
+color: #0f141e;
+background: #f1f1f1;
+box-sizing: border-box;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+strong {
+    color: #86898f;
+}
+.info {
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: row;  
+}
+.info-text p{
+    font-style: italic;
+    color: #86898f;
+    margin-left: 20px;
+}
+h1 {
+  font-weight: 400;
+  margin-left: 20px;
+}
+h2, h4  {
+    color: gray;
+}
+.card {
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+.card h2 {
+    margin-bottom: 10px;
+}
+.bg-yellow {
+    background: #fff9dc;
+}
+.bg-green {
+    background: #e5ffe7;
+}
+.bg-red { 
+    background: #ffe5e5;
+} 
+.avatar {
+    width: 280px;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+}
+.list {
+    padding: 0 20px;
+}
+.list li {
+    margin-bottom: 10px;
+}
+.table {
+    width: 100%;
+}
+.thead {
+    text-align: left;
+    color: gray;
+    margin-bottom: 10px;
+}
+.tbody td { 
+padding-bottom: 10px;
+}
+.table td:nth-child(2), .table td:nth-child(3) {
+    color: gray;
+}
+a {
+    text-decoration: none;
+    color: #5D6063;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    color: blue;
+}
+.btn {
+    background: #DCDCDC;
+    padding: 5px 10px;
+    color: #5D6063;
+    font-size: 14px;
+    border: none;
+    cursor: pointer; /*при наведении мыши меняеться курсор*/
+    border-radius: 5px;
+    font-family: inherit; /*ссылки наследуют гарнитуру сайта*/
+}
+.btn:hover {
+    background: #fff9dc;
+    color: #a0a3a7;
+}
+.btn:visited{
+    color: #CD853F;
+}
+h2{
+    text-align: center;
+}
+.person, .contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.form-group, .my-data{
+    margin-right: 20px;
+    width: calc(50% - 20px);/* посколько 20px ушло на отступы */
+}
+.form-group label{
+   width: 100%;
+   display: block; 
+   font-size: 14px;
+   color: #5D6063;
+}
+.form-group input, .form-group textarea {
+ width: 100%;
+ border: none;
+ background: transparent;
+ border-bottom: 1px solid #5D6063;
+ padding: 15px 0 10px;
+ margin-bottom: 10px;
+ outline: none; /*по умолчанию при заполнении поля появляеться синяя рамка, убрал рамку*/
+ font-family: inherit;
+}
+@media only screen and (max-width: 400px) {
+    .info {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .info-text p,  .info-text h1{
+        text-align: center;
+    }
+    .person, .contacts {
+        display: block;
+       }
+       .form-group, .my-data{
+           width: 100%;
+       }
+  }

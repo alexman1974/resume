@@ -6,33 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Манохин, cv, resume">
     <meta name="description" content="Это сайт - резюме Александра Манохина">
+    <link rel="stylesheet" href="style.css">
     <title>Манохин Александр</title>
 </head>
 <body>
+<div class="container">
+
+<div class="info">
+
+  <img src="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR-xq5_SBsNCjozPtS4zukng" alt="фото автора" class="avatar">
+  
+  <div class="info-text">
     <h1>Манохин Александр</h1>
-    <img src="https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR-xq5_SBsNCjozPtS4zukng" alt="фото автора" width="150px">
-    <p>Я соискатель вакансии <strong> frontend-разработчик</strong></p>
-    <p>Я люблю <em>путешествовать, заниматься спортом и программировать</em></p>
-    <p>Список социальных сетей:</p><br>
-    <a href="https://ok.ru" target="_blank" rel="noopener noreferrer">Одноклассники</a> | <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">telegram</a> | <a href="https://vk.com" target="_blank" rel="noopener noreferrer">вКонтакте</a> 
+    <p>Возраст: 48.</p>
+    <p>Cемейное положение: женат.</p>
+    <p>Образование: высшее, НГПУ, специальность: история.</p>
+    <p>О себе: креативен, работоспособен, готов к ненормированному рабочему дню, коммуникабелен, стрессоустойчив.</p>
+    <p>Я люблю путешествовать, заниматься спортом и писать код.</p>
+  </div>
 
-    <h2>Мои хобби</h2>
-    <ol>
-        <li>Путешествия</li>
-        <li>Спорт</li>
-        <li>Программирование</li>
+</div>
+
+<div class="card bg-green">
+<h2>Мои навыки</h2>
+    <ol class="list">
+      <li>Навыки адаптивной, кроссбраузерной и кроссплатформенной верстки. Хорошее знание HTML5, CSS3, Javascript, Bootstrap.</li>
+      <li>Опыт работы с Git</li>
+      <li>СorelDraw, Adobe Photoshop, Adobe Illustrator, Adobe Pagemaker, Adobe InDesign, Quark ExPress, AutoCAD, Word, PowerPoint, Finereader.</li>
     </ol>
+</div>
 
+<div class="card bg-yellow">
     <h2>Опыт работы</h2> 
-       </table><table>
-        <thead>
+       <table class="table">
+        <thead class="thead">
            <tr>
              <th>Место работы</th> 
              <th>Должность</th> 
              <th>Период</th>
            </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody">
           <tr>
             <td>ООО "Издательство ПРО</td>  
             <td>Дизайнер-верстальщик</td> 
@@ -60,24 +74,59 @@
           </tr>   
         </tbody>
       </table>
+    </div>  
+
+    <div class="card bg-red">
+      <h2>Мои хобби</h2>
+      <ol class="list">
+          <li>Путешествия</li>
+          <li>Спорт</li>
+          <li>Программирование</li>
+      </ol>
+  </div>
+
+<div class="contacts">
+
+<div class="my-data">
+  <h4>Список социальных сетей:</h4>
+  <a href="https://ok.ru" target="_blank" rel="noopener noreferrer" class="btn">Одноклассники</a> | <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="btn">telegram</a> | <a href="https://vk.com" target="_blank" rel="noopener noreferrer" class="btn">вКонтакте</a>
+</div>
+
+<div class="my-data">
+  <h4>Мои контакты:</h4>
+  <p> <strong>тел.:</strong> 8-(913)-788-65-12  <strong>  E-mail:</strong> <a href="mailto:alex_man_74@mail.ru">alex_man_74@mail.ru</a</p>
+</div>
+
+</div>
+
       <h2>Связатся со мной</h2>
-      <form action="" method="POST">
-        <div>
+      <form action="send.php" method="POST">
+        
+      <div class="person">
+        <div class="form-group">
           <label for="user_name">Ваше имя:</label>
-          <input type="user_name" id="user_name" placeholder="Введите имя"> 
+          <input type="user_name" id="user_name" placeholder="Введите имя" required> <!-- обязательное поле -->
         </div>
-        <div>
+        <div class="form-group">
           <label for="email">Ваш email:</label>
-          <input type="email" id="email" placeholder="Введите email">
+          <input type="email" id="email" placeholder="Введите email" maxlength="50" required><!-- обязательное поле -->
         </div>
-        <div>
+      </div>
+        
+      <div class="message-submit">  
+        <div class="form-group">
           <label for="message">Ваше сообщение:</label><br>
-          <textarea name="text" id="message" cols="30" rows="5" placeholder="Ваше сообщение..."></textarea>
+          <textarea name="text" id="message" cols="30" rows="5" placeholder="Ваше сообщение..." maxlength="300" ></textarea>
         </div>
         <div>
-          <button type="submit">Отправить форму</button>
+          <button type="submit" class="btn">Отправить форму</button>
         </div>
+      </div>
+
       </form>
+    </div>
+
+    
 
 </body>
 </html>
